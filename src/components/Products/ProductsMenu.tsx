@@ -31,6 +31,7 @@ const ProductsMenu: React.FC<ProductsMenuProps> = ({
   const [category, setCategory] = useState(0);
   return (
     <>
+    
       <Box width="100%">
         <Menu>
           <MenuButton

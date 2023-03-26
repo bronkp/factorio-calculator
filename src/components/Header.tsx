@@ -9,7 +9,7 @@ const Navbar:React.FC = () => {
   },[])
   return (
     <Flex width='100%' backgroundColor='gray.400'height={40} alignItems='center' display='flex' >
-
+<Flex>asdf</Flex>
         <Image onClick={()=>console.log(JSON.parse(localStorage.getItem('products')!))} height='100%' src='/factorio.png'/>
         <Text fontSize='7xl'>
         Factorio Calculator</Text>

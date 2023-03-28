@@ -42,11 +42,11 @@ const Options: React.FC = () => {
         width="100%"
       >
         <HStack>
-        <Button
+        {/* <Button
         onClick={() => localStorage.setItem("products", JSON.stringify([]))}
       >
        Debug
-      </Button>
+      </Button> */}
           {/* sets StartNew to true, opening the create new recipe page */}
           <Button
             bgColor="orange.400"

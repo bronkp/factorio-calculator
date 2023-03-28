@@ -6,6 +6,7 @@ const useProducts = () =>{
 
 //: product = {name:'',src:'',materials:[[]],time:,production:}
 //basics
+const coal: product = {name:'Coal', src:'/intermediate_products/coal.png', materials:[['coal']],time:1,production:1}
 const wood: product = {name:'Wood',src:'/intermediate_products/wood.png',materials:[['wood']],time:3,production:3}
 const water: product = {name:'Water', src:'/intermediate_products/water.png', materials:[['water']],time:1,production:1200}
 const fish:product={name:'Fish', src:'/fish.png', materials:[['fish']], time:1,production:1}
@@ -39,6 +40,7 @@ const engine_unit:product={name:'Engine unit', src:'/intermediate_products/engin
 const processing_unit:product = {name:'Processing unit', src:'/intermediate_products/processing_unit.png', materials:[[advanced_circuit,2],[electronic_circuit,20],[sulfuric_acid,5]],time:10,production:1}
 const electric_engine_unit:product = {name:'Electric engine unit', src:'/intermediate_products/electric_engine_unit.png', materials:[[engine_unit,1],[lubricant,15],[electronic_circuit,2]],time:10,production:1}
 const low_density_structure:product={name:'Low density structure',src:'/intermediate_products/low_density_structure.png',materials:[[copper_plate,20],[plastic_bar,5],[steel_plate,2]],time:20,production:1}
+const battery:product={name:'Battery', src:'/intermediate_products/battery.png', materials:[[copper_plate,1],[iron_plate,1],[sulfuric_acid,20]],time:4,production:1}
 //smelters
 const stone_furnace : product = {name:'Stone furnace', src:'/production/stone_furnace.png', materials:[['stone',5]],time:.5,production:1}
 const steel_furnace: product = {name:'Steel furnace', src:'/production/steel_furnace.png', materials:[[steel_plate,6],[stone_brick,10]],time:3, production:1}
@@ -54,6 +56,8 @@ const speed_module:product = {name:'Speed module', src:'/production/speed_module
 const efficiency_module:product = {name:'Efficiency module', src:'/production/efficiency_module.png', materials:[[advanced_circuit,5],[electronic_circuit,5]],time:15,production:1}
 const efficiency_module_2:product = {name:'Efficiency module 2', src:'/production/efficiency_module_2.png', materials:[[advanced_circuit,5],[efficiency_module,4],[processing_unit,5]],time:30,production:1}
 const efficiency_module_3:product = {name:'Efficiency module 3', src:'/production/efficiency_module_3.png', materials:[[advanced_circuit,5],[processing_unit,5],[efficiency_module_2,5]],time:60,production:1}
+const productivity_module:product = {name:'Productivity module', src:'/production/productivity_module.png', materials:[[advanced_circuit,5],[electronic_circuit,5]],time:15,production:1}
+
 
 const rocket_control_unit:product={name:'Rocket control unit', src:'/intermediate_products/rocket_control_unit.png', materials:[[processing_unit,1],[speed_module,1]],time:30,production:1}
 
@@ -108,47 +112,53 @@ const artillery_wagon: product = {name:'Artillery wagon', src:'/logistics/artill
 const exoskeleton:product={name:'Exoskeleton', src:'/combat/exoskeleton.png',materials:[[processing_unit,10],[steel_plate,20],[electric_engine_unit,30]],time:10,production:1}
 const portable_fusion_reactor:product={name:'Portable fusion reactor', src:'/combat/portable_fusion_reactor.png', materials:[[low_density_structure,50],[processing_unit,200]],time:10,production:1}
 const radar:product={name:'Radar', src:'/combat/radar.png', materials:[[electronic_circuit,5],[iron_gear_wheel,5],[iron_plate,10]],time:0.5,production:1}
-const rocket_launcher={name:'Rocket launcher', src:'/combat/rocket_launcher.png',materials:[[electronic_circuit,5],[iron_gear_wheel,5],[iron_plate,5]],time:10,production:1}
+const rocket_launcher:product={name:'Rocket launcher', src:'/combat/rocket_launcher.png',materials:[[electronic_circuit,5],[iron_gear_wheel,5],[iron_plate,5]],time:10,production:1}
+const firearm_magazine:product = {name:'Firearm magazine', src:'/combat/firearm_magazine.png',materials:[[iron_plate,4]],time:1,production:1}
+const piercing_rounds_magazine:product ={name:'Piercing round magazine', src:'/combat/piercing_rounds_magazine.png', materials:[[copper_plate,5],[firearm_magazine,1],[steel_plate,1]],time:3,production:1}
+const grenade:product={name:'Grenade', src:'/combat/grenade.png', materials:[[coal,10],[iron_plate,5]],time:8,production:1}
+const wall:product = {name:'Wall', src:'/combat/wall.png', materials:[[stone_brick,5]], time:0.5,production:1}
+
+const flying_robot_frame:product = {name:'Flying robot frame', src:'/intermediate_products/flying_robot_frame.png', materials:[[battery,2],[electric_engine_unit,1],[electronic_circuit,3],[steel_plate,1]],time:20,production:1}
 //vehicles 
 const car: product = {name:'Car', src:'/logistics/car.png', materials:[[steel_plate,5],[iron_plate,20],[engine_unit,8]],time:2,production:1}
 const tank: product = {name:'Tank', src:'/logistics/tank.png', materials:[[steel_plate,50],[engine_unit,32],[iron_gear_wheel,15],[advanced_circuit,10]],time:5,production:1}
 const spidertron: product = {name:'Spidertron', src:'/logistics/spidertron.png', materials:[[efficiency_module_3,2],[exoskeleton,4],[rocket_launcher,4],[low_density_structure,150],[rocket_control_unit,16],[portable_fusion_reactor,2],[fish,1], [radar,2]],time:10,production:1}
 
+//science packs
+const red_pack:product = {name:'Automation science pack', src:'/intermediate_products/automation_science_pack.png', materials:[[copper_plate,1],[iron_gear_wheel,1]],time:5,production:1}
+const green_pack:product = {name:'Logistic science pack', src:'/intermediate_products/logistic_science_pack.png', materials:[[inserter,1],[transport_belt,1]],time:6,production:1}
+const black_pack:product = {name:'Military science pack', src:'/intermediate_products/military_science_pack.png',materials:[[piercing_rounds_magazine,1],[grenade,1],[wall,2]],time:10,production:2}
+const blue_pack:product = {name:'Chemical science pack', src:'/intermediate_products/chemical_science_pack.png', materials:[[sulfur,1],[advanced_circuit,3],[engine_unit,2]],time:24,production:2}
+const purple_pack:product = {name:'Production science pack', src:'/intermediate_products/production_science_pack.png',materials:[[rail,30],[electric_furnace,1],[productivity_module,1]],time:21,production:3}
+const yellow_pack:product = {name:'Utility science pack', src:'/intermediate_products/utility_science_pack.png', materials:[[processing_unit,2],[flying_robot_frame,1],[low_density_structure,3]],time:21,production:3}
+
 //category arrays
 const smelts = ["Copper plate", "Iron plate", 'Steel plate'];
 const assemblers = [assembling_machine_1,assembling_machine_2,assembling_machine_3]
 const oils=['Heavy oil','Petroleum gas']
-const chemicals = ['Lubricant']
+const chemicals = ['Lubricant', 'Sulfur', 'Sulfuric acid']
 const smelters = [stone_furnace, steel_furnace,electric_furnace]
 
 const ratios: Ratio[] = []
+
 //gets the product as type product and the goal of production
 const getProduction=(product:product,production_goal:number,)=>{
-    console.log(product.name, 'pgoalproducttime',production_goal,product.production,product.time, (production_goal/(product.production/product.time), product.materials) )
+   // console.log(product.name, 'pgoalproducttime',production_goal,product.production,product.time, (production_goal/(product.production/product.time), product.materials) )
     let producer = smelts.includes(product.name)? smelters[0]: chemicals.includes(product.name)? chemical_plant: assemblers[0]
     
     if(ratios.filter(e=>e.name===product.name).length>0){
       let index  = ratios.map((e)=>{return e.name}).indexOf(product.name)
       ratios[index] ={name :product.name, producers:ratios[index].producers+(production_goal/(product.production/product.time)), src:product.src, goal:ratios[index].goal+production_goal, producer_type:producer}
     }else{
-ratios.push({name :product.name, producers:(production_goal/(product.production/product.time)), src:product.src, goal:production_goal, producer_type:producer})}
-
-        
+ratios.push({name :product.name, producers:(production_goal/(product.production/product.time)), src:product.src, goal:production_goal, producer_type:producer})}      
     product.materials.map((material, index)=>{
     if(typeof material[index] != 'string'){
-   
-  
-    
     //loops through for each material to get its individual production requirment 
-                                //material 1 is the the required ammount of the precursor
+                                //material[1] is the required ammount of the precursor
                                 //this is then mutiplied by its production goal divided 
-                                //by that producers production of its type
-                                console.log(material[0],material[1],production_goal)
-    
+                                //by that producers production of its type  
     getProduction(material[0],material[1]*(production_goal/product.production))}
     else{console.log(material[0])}})
-
-
 }
 const setProduction = (product:product,production_goal:number)=>{
     
@@ -173,16 +183,17 @@ const logistics = [
                 ]
 
 const precursors = [
-                    [heavy_oil, lubricant,petroleum_gas],
-                    [iron_plate,copper_plate,steel_plate,plastic_bar],
-                    [copper_cable,iron_stick,iron_gear_wheel,electronic_circuit, advanced_circuit,processing_unit, engine_unit, electric_engine_unit,low_density_structure,rocket_control_unit]
+                    [heavy_oil, lubricant,petroleum_gas,sulfuric_acid],
+                    [iron_plate,copper_plate,steel_plate,plastic_bar,sulfur,battery],
+                    [copper_cable,iron_stick,iron_gear_wheel,electronic_circuit, advanced_circuit,processing_unit, engine_unit, electric_engine_unit,flying_robot_frame, rocket_control_unit,low_density_structure],
+                    [red_pack,green_pack, black_pack, blue_pack, purple_pack,yellow_pack],
                 ]
 const production = [
                     [solar_panel, ],
                     smelters,
                     assemblers,
-                    [speed_module,efficiency_module,efficiency_module_2,efficiency_module_3]]
-const combat = [[portable_fusion_reactor, exoskeleton, radar, rocket_launcher]]
+                    [speed_module,efficiency_module,efficiency_module_2,efficiency_module_3, productivity_module]]
+const combat = [[portable_fusion_reactor, exoskeleton, radar, rocket_launcher, firearm_magazine,piercing_rounds_magazine, wall,grenade]]
 const materials =[{list:logistics,name:'Logistics'},{list:production,name:'Production'},{list:precursors,name:'Intermediate Products'},{list:combat,name:'Combat'}]
 return{getProduction,materials,logistics, precursors,setProduction,production, smelters,smelts,assemblers, chemicals, oils, oil_refinery}}
 export default useProducts

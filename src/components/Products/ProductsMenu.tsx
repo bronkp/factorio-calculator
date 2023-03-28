@@ -79,7 +79,11 @@ const ProductsMenu: React.FC<ProductsMenuProps> = ({
                       <HStack spacing={0}>
                         {row.map((product, index) => (
                           <Flex
-                            bgColor="rgb(53,62,65)"
+                        
+                            bgGradient={[
+                              'linear(to-t, rgb(60,52,65),rgb(60,62,65) )',
+                              
+                            ]}
                             justifyContent="center"
                             alignItems="center"
                             shadow="xs"

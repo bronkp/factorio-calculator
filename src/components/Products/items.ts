@@ -111,13 +111,14 @@ const artillery_wagon: product = {name:'Artillery wagon', src:'/logistics/artill
 //gear
 const exoskeleton:product={name:'Exoskeleton', src:'/combat/exoskeleton.png',materials:[[processing_unit,10],[steel_plate,20],[electric_engine_unit,30]],time:10,production:1}
 const portable_fusion_reactor:product={name:'Portable fusion reactor', src:'/combat/portable_fusion_reactor.png', materials:[[low_density_structure,50],[processing_unit,200]],time:10,production:1}
+//defense
 const radar:product={name:'Radar', src:'/combat/radar.png', materials:[[electronic_circuit,5],[iron_gear_wheel,5],[iron_plate,10]],time:0.5,production:1}
 const rocket_launcher:product={name:'Rocket launcher', src:'/combat/rocket_launcher.png',materials:[[electronic_circuit,5],[iron_gear_wheel,5],[iron_plate,5]],time:10,production:1}
 const firearm_magazine:product = {name:'Firearm magazine', src:'/combat/firearm_magazine.png',materials:[[iron_plate,4]],time:1,production:1}
 const piercing_rounds_magazine:product ={name:'Piercing round magazine', src:'/combat/piercing_rounds_magazine.png', materials:[[copper_plate,5],[firearm_magazine,1],[steel_plate,1]],time:3,production:1}
 const grenade:product={name:'Grenade', src:'/combat/grenade.png', materials:[[coal,10],[iron_plate,5]],time:8,production:1}
 const wall:product = {name:'Wall', src:'/combat/wall.png', materials:[[stone_brick,5]], time:0.5,production:1}
-
+const gun_turret:product = {name:'Gun turret', src:'/combat/gun_turret.png', materials:[[copper_plate,10],[iron_gear_wheel,10],[iron_plate,20]],time:8,production:1}
 const flying_robot_frame:product = {name:'Flying robot frame', src:'/intermediate_products/flying_robot_frame.png', materials:[[battery,2],[electric_engine_unit,1],[electronic_circuit,3],[steel_plate,1]],time:20,production:1}
 //vehicles 
 const car: product = {name:'Car', src:'/logistics/car.png', materials:[[steel_plate,5],[iron_plate,20],[engine_unit,8]],time:2,production:1}
@@ -193,7 +194,15 @@ const production = [
                     smelters,
                     assemblers,
                     [speed_module,efficiency_module,efficiency_module_2,efficiency_module_3, productivity_module]]
-const combat = [[portable_fusion_reactor, exoskeleton, radar, rocket_launcher, firearm_magazine,piercing_rounds_magazine, wall,grenade]]
+const combat = [
+                [rocket_launcher,],
+                [ firearm_magazine,piercing_rounds_magazine,],
+                [grenade],
+                [portable_fusion_reactor, exoskeleton,],
+                [wall,gun_turret, radar,]
+            ]
+
+
 const materials =[{list:logistics,name:'Logistics'},{list:production,name:'Production'},{list:precursors,name:'Intermediate Products'},{list:combat,name:'Combat'}]
 return{getProduction,materials,logistics, precursors,setProduction,production, smelters,smelts,assemblers, chemicals, oils, oil_refinery}}
 export default useProducts

@@ -102,7 +102,7 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
                 <Text color="gray.400">
                   {/* checks if the production is a furnace then check which type of producer to give the proper ratio */}
                   {ratio.name === "Water"
-                    ? ratio.producers
+                    ? ratio.producers.toFixed(2)
                     : oils.includes(ratio.name) ||
                       ratio.name === "Wood" ||
                       ratio.name === "Fish"

@@ -40,7 +40,7 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
     setProducers(initialTypes);
     console.log("here");
     setLoading(false);
-  }, []);
+  }, [product]);
   const handleDelete = (index: number) => {
     let items = JSON.parse(localStorage.getItem("products")!);
     items.splice(index, 1);

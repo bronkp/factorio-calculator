@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from 'factorio_calc/styles/Home.module.css'
 import Options from 'factorio_calc/components/Options'
-import Footer from 'factorio_calc/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 

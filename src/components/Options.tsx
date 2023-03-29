@@ -40,6 +40,7 @@ const Options: React.FC = () => {
   return (
     <>
       <Flex
+      display='flex'
         bgColor="orange.400"
         justifyContent="center"
         height={10}

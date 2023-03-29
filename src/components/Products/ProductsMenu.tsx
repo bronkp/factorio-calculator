@@ -42,7 +42,7 @@ const ProductsMenu: React.FC<ProductsMenuProps> = ({
             backgroundColor="gray.400"
           >
             <Flex display="flex" justifyContent="center" alignItems="center">
-              {product ? <Image src={product} /> : <Icon />}
+              {product ? <Image alt='' src={product} /> : <Icon />}
             </Flex>
           </MenuButton>
 
@@ -55,6 +55,7 @@ const ProductsMenu: React.FC<ProductsMenuProps> = ({
                 "/groups/combat.png",
               ].map((img, index) => (
                 <Image
+                alt=''
                 key={index}
                   src={img}
                   cursor="pointer"
@@ -97,6 +98,7 @@ const ProductsMenu: React.FC<ProductsMenuProps> = ({
                             width={10}
                           >
                             <Image
+                            alt=''
                               height={7}
                               src={product.src}
                               title={product.name}

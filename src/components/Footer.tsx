@@ -10,7 +10,7 @@ const Footer:React.FC = () => {
     <Text >Welcome to my calculator! </Text>
     <Text>This project was mainly for practice in React, so it does not have everything.</Text>
     <Text >Contact me: rorysaxton@gmail.com</Text>
-    <Link href='https://github.com/bronkp'>Github</Link>
+   
 
     </VStack>
     </Flex>

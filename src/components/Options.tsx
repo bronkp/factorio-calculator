@@ -80,7 +80,7 @@ const Options: React.FC = () => {
             key={index}
             alt=''
               cursor="pointer"
-              title={`${productInfo.name}: ${productInfo.ratios[0].goal}/s`}
+              title={`${productInfo.name}: ${productInfo.ratios?.[0].goal}/s`}
               onClick={() => {
                 setStartNew(false);
                 setView([productInfo, index]);

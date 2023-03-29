@@ -46,7 +46,7 @@ const ProductsMenu: React.FC<ProductsMenuProps> = ({
             </Flex>
           </MenuButton>
 
-          <MenuList bgColor="rgb(53,55,60)">
+          <MenuList bgColor="rgb(53,55,60)" >
             <HStack>
               {[
                 "/groups/logistics.png",
@@ -68,7 +68,7 @@ const ProductsMenu: React.FC<ProductsMenuProps> = ({
                 fontSize="x-large"
                 title={materials[category].name}
               >
-                <Flex justifyContent="flex-start" width={1000}>
+                <Flex justifyContent="flex-start" width={500}>
                   <VStack
                     spacing={0}
                     justifyContent="flex-start"

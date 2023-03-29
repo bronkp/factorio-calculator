@@ -16,8 +16,8 @@ const NewRecipe: React.FC<NewRecipeProps> = ({ setProducts, setStartNew,setView 
   const [warning, setWarning] = useState(false)
   return (
     <>
-      <Flex width={50} borderWidth={0} height="100vh">
-        <VStack alignItems='center' pl={20} height="100%" spacing={0}>
+      <Flex width={50}  borderWidth={0} height="100%" >
+        <VStack alignItems='center'  height="100%" spacing={0}>
           {/*  */}
           
           {warning && <Text fontSize='xs' color='orange.400'>No Product Set</Text>}

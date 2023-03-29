@@ -60,7 +60,9 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
   return (
     <>
       {!isLoading && (
-        <>
+        <><Flex bgColor='rgb(53,55,60)'>
+          <VStack>
+        <Button color='white' bgColor='rgb(53,55,60)' mt={5} _hover={{bgColor:'orange.500', color:'black'}} onClick={() => handleDelete(recipeIndex)}>Delete</Button>
           <SimpleGrid
             justifyContent="flex-start"
             width={1000}
@@ -101,6 +103,7 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
                 />
                 <Text color="gray.400">
                   {/* checks if the production is a furnace then check which type of producer to give the proper ratio */}
+                  
                   {ratio.name === "Water"
                     ? ratio.producers.toFixed(2)
                     : oils.includes(ratio.name) ||
@@ -200,19 +203,10 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
               </>
             ))}
           </SimpleGrid>
-          <Text
-            onClick={() => handleDelete(recipeIndex)}
-            pl={1}
-            cursor="pointer"
-            height="100%"
-            as="u"
-            fontStyle="oblique"
-            _hover={{ color: "pink" }}
-            color="white"
-          >
-            delete
-          </Text>{" "}
-        </>
+          
+           
+          {" "}
+        </VStack></Flex></>
       )}
     </>
   );

@@ -27,10 +27,10 @@ setTimeout(() => {
 }, 100)
   }
   return (
-    <Flex width='100%' backgroundColor='gray.400'height={40} alignItems='center' display='flex' >
+    <Flex width='100%' backgroundColor='gray.400'  bgGradient='linear(to-r, gray.500, gray.700)'height={40} alignItems='center' display='flex' >
 <Train src='choochoo.png' animate={{display:display, x:xPos, y:yPos}} display={display} onClick={()=>console.log(display)}/>
         <Image onClick={()=>{console.log(JSON.parse(localStorage.getItem('products')!)); handleClick();}} height='100%' src='/factorio.png'/>
-        <Text fontSize='7xl' as='b'  bgGradient='linear(to-r, gray.800, yellow.800)'
+        <Text fontSize='7xl' as='b'  bgGradient='linear(to-r, gray.800,gray.800)'
   bgClip='text'>
         Factorio Calculator</Text>
     </Flex>

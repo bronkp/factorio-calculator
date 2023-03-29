@@ -6,6 +6,7 @@ const useProducts = () =>{
 
 //: product = {name:'',src:'',materials:[[]],time:,production:}
 //basics
+const stone:product ={name:'Stone', src:'', materials:[['stone']],time:1,production:1}
 const coal: product = {name:'Coal', src:'/intermediate_products/coal.png', materials:[['coal']],time:1,production:1}
 const wood: product = {name:'Wood',src:'/intermediate_products/wood.png',materials:[['wood']],time:3,production:3}
 const water: product = {name:'Water', src:'/intermediate_products/water.png', materials:[['water']],time:1,production:1200}
@@ -100,7 +101,7 @@ const chemical_plant:product = {name:'Chemical plant', src:'/production/chemical
 const oil_refinery: product = {name:'Oil refinery', src:'/production/oil_refinery.png', materials:[[electronic_circuit,10],[iron_gear_wheel,10],[pipe,10],[steel_plate,15],[stone_brick,10]],time:8,production:1}
 
 //trains
-const rail: product = {name:'Rail', src:'/logistics/rail.png', materials:[[iron_stick,1],['stone',1],[steel_plate,1]],time:.5,production:2}
+const rail: product = {name:'Rail', src:'/logistics/rail.png', materials:[[iron_stick,1],[stone,1],[steel_plate,1]],time:.5,production:2}
 const train_stop: product = {name:'Train stop', src:'/logistics/train_stop.png', materials:[[electronic_circuit,5],[iron_plate,6],[iron_stick,6],[steel_plate,3]],time:.5,production:1}
 const rail_signal: product = {name:'Rail signal', src:'/logistics/rail_signal.png', materials:[[electronic_circuit,1],[iron_plate,5]],time:.5,production:1}
 const rail_chain_signal: product = {name:'Rail chain signal', src:'/logistics/rail_chain_signal.png', materials:[[electronic_circuit,1],[iron_plate,5]],time:.5,production:1}

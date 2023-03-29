@@ -76,6 +76,7 @@ const Options: React.FC = () => {
           {/* maps through saved products */}
           {products?.map((productInfo: product, index) => (
             <Image
+            key={index}
               cursor="pointer"
               title={`${productInfo.name}: ${productInfo.ratios[0].goal}/s`}
               onClick={() => {

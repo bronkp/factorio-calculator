@@ -55,6 +55,7 @@ const ProductsMenu: React.FC<ProductsMenuProps> = ({
                 "/groups/combat.png",
               ].map((img, index) => (
                 <Image
+                key={index}
                   src={img}
                   cursor="pointer"
                   onClick={() => setCategory(index)}
@@ -75,11 +76,11 @@ const ProductsMenu: React.FC<ProductsMenuProps> = ({
                     alignItems="flex-start"
                     display="flex"
                   >
-                    {materials[category].list.map((row) => (
-                      <HStack spacing={0}>
+                    {materials[category].list.map((row,index) => (
+                      <HStack key={index} spacing={0}>
                         {row.map((product, index) => (
                           <Flex
-                        
+                          
                             bgGradient={[
                               'linear(to-t, rgb(60,52,65),rgb(60,62,65) )',
                               

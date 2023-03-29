@@ -95,6 +95,7 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
               <>
                 <Image
                 key={ratio.src+index}
+                alt=''
                   minW={30}
                   maxHeight={30}
                   src={ratio.src}
@@ -127,25 +128,27 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
                 {/* checking if item belongs to a smelter or assembler */}
                 {ratio.name === "Fish" ? (
                   <Image
+                  alt=''
                     key={Date.now()}
                     src={"/intermediate_products/water.png"}
                   />
                 ) : ratio.name === "Water" ? (
                   <Image
+                  alt=''
                     key={Date.now()}
                     src={"/production/offshore_pump.png"}
                   />
                 ) : ratio.name === "Wood" ? (
-                  <Image key={Date.now()} src={"/tree.png"} />
+                  <Image key={Date.now()} alt='' src={"/tree.png"} />
                 ) : oils.includes(ratio.name) ? (
-                  <Image key={Date.now()} src={oil_refinery.src} />
+                  <Image key={Date.now()} alt='' src={oil_refinery.src} />
                 ) : smelts.includes(ratio.name) ? (
                   <Box height="100%"key={index+'asdfa'}>
                     {/* Menu for selecting desired furnace */}
                     <Menu >
                       <MenuButton>
                         <Box boxShadow="dark-lg" bgColor="rgb(63,65,70)">
-                          <Image key={Date.now()} src={producers[index].src} />
+                          <Image alt='' key={Date.now()} src={producers[index].src} />
                         </Box>
                       </MenuButton>
                       <MenuList width={100} p={0} m={0} maxW={1}>
@@ -154,6 +157,7 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
                             <HStack key={index+'smelters'}>
                               <Box cursor="pointer">
                                 <Image
+                                alt=''
                                   title={smelter.name}
                                   onClick={() => {
                                     changeProduction(index, smelter);
@@ -171,7 +175,7 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
                 ) : chemicals.includes(ratio.name) ? (
                   <>
                     {" "}
-                    <Image key={Date.now()} src={producers[index].src} />
+                    <Image alt='' key={Date.now()} src={producers[index].src} />
                   </>
                 ) : (
                   <Box height="100%" key={ratio.producer_type.name+index}>
@@ -179,7 +183,7 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
                     <Menu >
                       <MenuButton>
                         <Box boxShadow="dark-lg" bgColor="rgb(63,65,70)">
-                          <Image key={Date.now()} src={producers[index].src} />
+                          <Image alt='' key={Date.now()} src={producers[index].src} />
                         </Box>
                       </MenuButton>
                       <MenuList p={0} m={0} maxW={1}>
@@ -187,6 +191,7 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
                           
                             <HStack key={index+';asdf'}>
                               <Image
+                              alt=''
                                 title={assembler.name}
                                 onClick={() => {
                                   changeProduction(index, assembler);

@@ -77,6 +77,7 @@ const Options: React.FC = () => {
           {products?.map((productInfo: product, index) => (
             <Image
             key={index}
+            alt=''
               cursor="pointer"
               title={`${productInfo.name}: ${productInfo.ratios[0].goal}/s`}
               onClick={() => {

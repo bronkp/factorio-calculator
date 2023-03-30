@@ -95,7 +95,7 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
             {product?.ratios?.map((ratio: Ratio, index: number) => (
               <>
                 <Image
-                
+                key={ratio.src+index}
                 alt=''
                   minW={30}
                   maxHeight={30}
@@ -125,7 +125,7 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
                     ? ((ratio.producers * 4) / 3).toFixed(2)
                     : ratio.producers / 1.25}
                 </Text>
-                <Text color="gray.400" > {ratio.goal}/s</Text>
+                <Text color="gray.400" key={ratio.goal+'_'+index}> {ratio.goal}/s</Text>
                 {/* checking if item belongs to a smelter or assembler */}
                 {ratio.name === "Fish" ? (
                   <Image
@@ -144,7 +144,7 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
                 ) : oils.includes(ratio.name) ? (
                   <Image key={Date.now()} alt='' src={oil_refinery.src} />
                 ) : smelts.includes(ratio.name) ? (
-                  <Box height="100%">
+                  <Box height="100%" key={'smelts'+index}>
                     {/* Menu for selecting desired furnace */}
                     <Menu >
                       <MenuButton>
@@ -155,7 +155,7 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
                       <MenuList width={100} p={0} m={0} maxW={1}>
                         {smelters.map((smelter,smelterIndex) => (
                           
-                            <HStack>
+                            <HStack key={smelter.name+smelterIndex+'_'+index}>
                               <Box cursor="pointer">
                                 <Image
                                 alt=''
@@ -179,7 +179,7 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
                     <Image alt='' key={Date.now()} src={producers[index].src} />
                   </>
                 ) : (
-                  <Box height="100%">
+                  <Box height="100%" key={'producers'+index}>
                     {/* Menu for selecting desired assembler */}
                     <Menu >
                       <MenuButton>
@@ -190,7 +190,7 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
                       <MenuList p={0} m={0} maxW={1}>
                         {assemblers.map((assembler,assemblerIndex) => (
                           
-                            <HStack >
+                            <HStack key={assembler.name+assemblerIndex+'_'+index}>
                               <Image
                               alt=''
                                 title={assembler.name}

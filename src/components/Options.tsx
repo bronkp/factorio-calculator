@@ -92,7 +92,7 @@ const Options: React.FC = () => {
       </Flex>
 
       {startNew && (
-        <Flex height={900}justifyContent="center">
+        <Flex height={900}justifyContent={{base:'flex-start',md:"center"}}>
         <NewRecipe
           setView={setView}
           setProducts={setProducts}

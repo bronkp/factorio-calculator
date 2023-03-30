@@ -28,9 +28,9 @@ setTimeout(() => {
   }
   return (
     <Flex width='100%' backgroundColor='gray.400'  bgGradient='linear(to-r, gray.500, gray.700)'height={40} alignItems='center' display='flex' >
-<Train alt='' src='choochoo.png' animate={{display:display, x:xPos, y:yPos}} display={display} onClick={()=>console.log(display)}/>
-        <Image alt='' onClick={()=>{console.log(JSON.parse(localStorage.getItem('products')!)); handleClick();}} height='100%' src='/factorio.png'/>
-        <Text fontSize='7xl' as='b'  bgGradient='linear(to-r, gray.800,gray.800)'
+<Train alt='' src='choochoo.png' animate={{display:{base:display, md:'none'}, x:xPos, y:yPos}} display={display} onClick={()=>console.log(display)}/>
+        <Image display={{base:'none', md:'flex'}} alt='' onClick={()=>{console.log(JSON.parse(localStorage.getItem('products')!)); handleClick();}} height='100%' src='/factorio.png'/>
+        <Text fontSize={{base:'5xl', md:'7xl'}} as='b'  bgGradient='linear(to-r, gray.800,gray.800)'
   bgClip='text'>
         Factorio Calculator</Text>
     </Flex>

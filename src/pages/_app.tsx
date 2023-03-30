@@ -1,4 +1,4 @@
-import { ChakraProvider, extendTheme, Flex } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme, Flex, Show } from '@chakra-ui/react'
 import Navbar from 'factorio_calc/components/Header'
 import 'factorio_calc/styles/globals.css'
 import "@fontsource/cousine"
@@ -18,6 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <Navbar/>
     
   <Component {...pageProps} />
+  
   <Footer/>
   </ChakraProvider>)
 }

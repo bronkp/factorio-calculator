@@ -70,7 +70,7 @@ const ProductsMenu: React.FC<ProductsMenuProps> = ({
                 fontSize="x-large"
                 title={materials[category].name}
               >
-                <Flex justifyContent="flex-start" width={500}>
+                <Flex justifyContent="flex-start" width={{base:400, md:500}}>
                   <VStack
                     spacing={0}
                     justifyContent="flex-start"

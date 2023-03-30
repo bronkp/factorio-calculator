@@ -29,7 +29,7 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
 }) => {
   const [producers, setProducers] = useState<any>();
   const [isLoading, setLoading] = useState(true);
-
+  const fontSize = [10,20]
   useEffect(() => {
     console.log(product);
 
@@ -66,7 +66,7 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
         <Button color='white' bgColor='rgb(53,55,60)' mt={5} _hover={{bgColor:'orange.500', color:'black'}} onClick={() => handleDelete(recipeIndex)}>Delete</Button>
           <SimpleGrid
             justifyContent="flex-start"
-            width={1000}
+            width={{base:400,md:1000}}
             height="100%"
             bgColor="rgb(53,55,60)"
             pb={300}
@@ -78,16 +78,16 @@ const SavedRecipe: React.FC<SavedRecipeProps> = ({
             rowGap={11}
             gap={0}
           >
-            <Text color="gray.200" fontWeight="bold">
+            <Text fontSize={{base:fontSize[0], md:fontSize[1]}} color="gray.200" fontWeight="bold">
               Product
             </Text>
-            <Text color="gray.200" fontWeight="bold">
+            <Text fontSize={{base:fontSize[0], md:fontSize[1]}} color="gray.200" fontWeight="bold">
               Producers
             </Text>
-            <Text color="gray.200" fontWeight="bold">
+            <Text fontSize={{base:fontSize[0], md:fontSize[1]}} color="gray.200" fontWeight="bold">
               Goal per/s
             </Text>
-            <Text color="gray.200" fontWeight="bold">
+            <Text fontSize={{base:fontSize[0], md:fontSize[1]}} color="gray.200" fontWeight="bold">
               Producer Type
             </Text>
             {/* maps through the ratio data for the selected production displaying their info
